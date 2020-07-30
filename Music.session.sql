@@ -76,3 +76,25 @@ FROM Song
     JOIN Album ON Song.AlbumId = Album.AlbumId
     JOIN Artist ON Song.ArtistId = Artist.ArtistId
 WHERE Artist.ArtistName = "Madlib";
+
+-- #6
+SELECT COUNT() as "Total Songs on Album", Album.Title
+FROM Song
+    JOIN Album ON Song.AlbumId = Album.AlbumId
+GROUP BY Song.AlbumId;
+
+-- #7
+SELECT COUNT() as "Total Songs Per Artist", Artist.ArtistName
+FROM Song
+    JOIN Artist ON Song.ArtistId = Artist.ArtistId
+GROUP BY Song.ArtistId;
+
+-- #8
+SELECT COUNT() as "Total Songs Per Genre", Genre.Label
+FROM Song
+    JOIN Genre ON Song.GenreId = Genre.GenreId
+GROUP BY Song.GenreId;
+
+-- #9
+SELECT MAX(Album.AlbumLength) as "Longest Album", Album.Title
+FROM Album
