@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "musichistory.db",
+            "driver": "SQLite",
+            "name": "Music",
+            "previewLimit": 50
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
