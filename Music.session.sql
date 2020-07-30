@@ -97,4 +97,13 @@ GROUP BY Song.GenreId;
 
 -- #9
 SELECT MAX(Album.AlbumLength) as "Longest Album", Album.Title
-FROM Album
+FROM Album;
+
+-- #10
+SELECT MAX(Song.SongLength) as "Longest Song", Song.Title
+From Song;
+
+-- #11
+SELECT MAX(Song.SongLength) as "Longest Song", Song.Title, Album.Title as "Album Title"
+FROM Song
+    JOIN Album ON Song.AlbumId = Album.AlbumId;
